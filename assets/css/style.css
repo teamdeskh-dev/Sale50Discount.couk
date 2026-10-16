@@ -1,0 +1,70 @@
+/* Sale50Discount.couk - site styles */
+:root{
+  --ink:#101826;--mut:#5b6472;--brand:#c2572f;--brand-d:#8f3d1f;--acc:#e8a13c;
+  --line:#e6e8ec;--bg:#f7f8fa;--card:#ffffff;--ok:#2f7a5a;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 "Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--brand-d);text-decoration:none;border-bottom:1px solid #e3c9bd}
+a:hover{border-bottom-color:var(--acc)}
+h1,h2,h3{line-height:1.25;margin:0 0 .5em}
+h1{font-size:2.1rem}
+h2{font-size:1.45rem;margin-top:1.8em}
+h3{font-size:1.12rem;margin-top:1.4em}
+p{margin:0 0 1em}
+ul,ol{padding-left:1.25rem;margin:0 0 1.2em}
+li{margin-bottom:.45rem}
+.site-head{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;padding:.9rem 1.4rem;background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+.brand{display:flex;align-items:center;gap:.6rem;font-weight:700;font-size:1.15rem;color:var(--ink);border:0}
+.brand img{border-radius:9px}
+.nav{display:flex;flex-wrap:wrap;gap:.2rem}
+.nav a{color:var(--mut);border:0;padding:.42rem .62rem;border-radius:8px;font-size:.93rem;font-weight:600}
+.nav a.on{background:var(--brand);color:#fff}
+.nav a:hover{background:#f0f1f3;color:var(--ink)}
+.nav a.on:hover{background:var(--brand);color:#fff}
+main{max-width:1080px;margin:0 auto;padding:1.6rem 1.2rem 2.4rem}
+.crumb{font-size:.86rem;color:var(--mut);margin-bottom:1rem}
+.crumb a{color:var(--mut);border:0}
+.hero{background:#fff;border:1px solid var(--line);border-radius:16px;padding:1.8rem;margin-bottom:1.6rem}
+.hero h1{margin-bottom:.5rem}
+.lede{font-size:1.08rem;color:var(--mut);margin:0}
+.note{background:#fdf8f1;border:1px solid #f0dcc2;border-left:5px solid var(--acc);border-radius:12px;padding:1rem 1.1rem;margin:1.3rem 0;color:#5c4a34;font-size:.95rem}
+.note strong{color:#4a3a26}
+.grid{display:grid;gap:1.1rem;grid-template-columns:repeat(auto-fit,minmax(270px,1fr))}
+.grid-2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.2rem}
+.card img{border-radius:10px;margin-bottom:.8rem;border:1px solid var(--line)}
+.card h3{margin-top:0;margin-bottom:.35rem}
+.card p{color:var(--mut);font-size:.95rem;margin-bottom:.6rem}
+.more{font-weight:600;font-size:.94rem;border:0}
+.chip{display:inline-block;background:#f0f1f3;color:var(--mut);border-radius:999px;padding:.15rem .6rem;font-size:.78rem;font-weight:600;letter-spacing:.02em}
+.meta{color:var(--mut);font-size:.9rem}
+.checklist{list-style:none;padding-left:0}
+.checklist li{padding-left:1.7rem;position:relative}
+.checklist li::before{content:"\2713";position:absolute;left:0;top:0;color:var(--ok);font-weight:700}
+.steps{counter-reset:s;list-style:none;padding-left:0}
+.steps li{counter-increment:s;padding-left:2.2rem;position:relative;margin-bottom:.8rem}
+.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:1.6rem;height:1.6rem;background:var(--brand);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:700}
+.qa{background:#fff;border:1px solid var(--line);border-radius:12px;padding:1.1rem;margin-bottom:.9rem}
+.qa h3{margin:0 0 .35rem;color:var(--brand-d)}
+.qa p{margin:0;color:var(--mut)}
+.article{background:#fff;border:1px solid var(--line);border-radius:16px;padding:1.8rem}
+.article h2{margin-top:1.6em}
+.related{margin-top:2rem}
+.foot-grid{max-width:1080px;margin:0 auto;display:grid;gap:1.4rem;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.footer{background:#fff;border-top:1px solid var(--line);padding:2rem 1.2rem}
+.foot-grid strong{display:block;margin-bottom:.45rem}
+.foot-grid p{color:var(--mut);font-size:.92rem;margin:.25rem 0}
+.foot-grid a{color:var(--mut);border:0}
+.foot-grid a:hover{color:var(--brand-d)}
+.fine{max-width:1080px;margin:1.4rem auto 0;padding-top:1rem;border-top:1px solid var(--line);color:var(--mut);font-size:.84rem}
+@media(min-width:760px){
+  .hero{display:grid;grid-template-columns:1.5fr 1fr;gap:1.6rem;align-items:center}
+  .hero .hero-img{border-radius:12px;border:1px solid var(--line)}
+}
+@media(max-width:520px){
+  h1{font-size:1.7rem}
+  .nav a{font-size:.88rem}
+}
